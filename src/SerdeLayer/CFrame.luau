@@ -1,6 +1,4 @@
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-
-local Types = require(ReplicatedStorage.Libraries.Reliability.Types)
+local Types = require(script.Parent.Parent.Types)
 
 export type PacketSerde = Types.PacketSerde
 local Size: number = 24
