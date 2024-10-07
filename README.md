@@ -20,7 +20,6 @@ reliability = "realkastien/reliability@0.0.3"
 ```lua
 local YourRemote: RemoteEvent = Reliability.getReliable("NameOfYourRemote")
 ```
-<br/>
 
 ### Referencing an UnreliableRemoteEvent
 
