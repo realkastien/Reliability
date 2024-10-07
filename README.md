@@ -4,15 +4,15 @@
 # Reliability
 A lightweight networking library with buffers, extremely friendly syntax and focused on giving you high control over your Remote behavior.
 
+### from Wally
+```
+reliability = "realkastien/reliability@0.0.3"
+```
+
 ## Getting Started
 
 > [!NOTE]
 > Reliability is intended to give you close contact to raw RemoteEvent | UnreliableRemoteEvent usage.
-
-### Reliability from Wally
-```
-reliability = "realkastien/reliability@0.0.3"
-```
 
 ### Referencing a RemoteEvent
 
