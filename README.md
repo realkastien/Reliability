@@ -74,5 +74,6 @@ All Serdes available:
 | String | Any string |
 | UInt8 | Numbers between 0 and 255 |
 | UInt16 | Numbers between 0 and 65,536 |
+| UInt32 | Numbers between 0 and 4,294,967,295 |
 | Vector3 | For Vector3 or any structure that contains X,Y,Z values |
 | CFrame | For any CFrame, storing both position and orientation information |

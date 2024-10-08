@@ -1,9 +1,9 @@
 [package]
 name = "realkastien/reliability"
-description = "A light-weight networking library with buffers, extremely friendly API and focused on giving you all the tools you need."
+description = "A lightweight networking library with buffers, extremely friendly syntax and focused on giving you high control over your Remote behavior."
 
 license = "MIT"
-version = "0.0.3"
+version = "0.0.4"
 authors = ["realkastien"]
 
 registry = "https://github.com/UpliftGames/wally-index"

@@ -1,3 +1,6 @@
+local LOOK_UP_THRESHOLD: number = 24
+
+local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local SerdeLayer = require(script.Parent.SerdeLayer)
@@ -43,6 +46,42 @@ function ServerReliability.getNetwork(Structure: {[string]: string}, Prefix: str
     end
 
     return Network
+end
+
+function ServerReliability.fireSelected(Remote: any & (RemoteEvent | UnreliableRemoteEvent), Selected: {Player}, ...: any): ()
+    for _, Player in Selected do
+        Remote:FireClient(Player, ...)
+    end
+end
+
+function ServerReliability.fireExcept(Remote: any & (RemoteEvent | UnreliableRemoteEvent), Except: {Player}, ...: any): ()
+    local AllPlayers: {Player} = Players:GetPlayers()
+    local ExceptSize: number = #Except
+
+    if ExceptSize > LOOK_UP_THRESHOLD then
+        local ExceptLookUp: { [Player]: boolean } = {}
+        for _, Player in Except do
+            ExceptLookUp[Player] = true
+        end
+
+        for _, Player in AllPlayers do
+            if ExceptLookUp[Player] then
+                continue
+            end
+    
+            Remote:FireClient(Player, ...)
+        end
+
+        return
+    end
+
+    for _, Player in AllPlayers do
+        if table.find(Except, Player) then
+            continue
+        end
+
+        Remote:FireClient(Player, ...)
+    end
 end
 
 return ServerReliability

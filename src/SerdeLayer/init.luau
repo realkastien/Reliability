@@ -11,6 +11,7 @@ local Serde = {
 
     UInt8 = require(script:WaitForChild("UInt8"));
     UInt16 = require(script:WaitForChild("UInt16"));
+    UInt32 = require(script:WaitForChild("UInt32"));
 
     Vector3 = require(script:WaitForChild("Vector3"));
     CFrame = require(script:WaitForChild("CFrame"));

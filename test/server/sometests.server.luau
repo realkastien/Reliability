@@ -7,15 +7,16 @@ local Reliability = require(ReplicatedStorage.Reliability)
 local SerdeLayer = require(ReplicatedStorage.Reliability.SerdeLayer)
 
 local SomeRemote = Reliability.getReliable("SomeRemote")
-local Serde = SerdeLayer.String
+local Serde = SerdeLayer.UInt32
 
 Players.PlayerAdded:Connect(function(Player: Player)
-    task.wait(15)
+    task.wait(5)
     print("Starting bandwith test")
     local started: number = os.clock()
 
+    local SerializedString = Serde:Serialize(1239234788)
     for _=1, TEST_LENGTH do
-        SomeRemote:FireClient(Player, Serde:Serialize("aweirdstring"))
+        SomeRemote:FireClient(Player, SerializedString)
     end
 
     local finished: number = os.clock()
