@@ -11,7 +11,14 @@
 		"ServerScriptService": {
 			"$className": "ServerScriptService",
 			"ReliabilityTests": {
-				"$path": "test"
+				"$path": "test/server"
+			}
+		},
+
+		"ReplicatedFirst": {
+			"$className": "ReplicatedFirst",
+			"ReliabilityTests": {
+				"$path": "test/client"
 			}
 		}
 	}
