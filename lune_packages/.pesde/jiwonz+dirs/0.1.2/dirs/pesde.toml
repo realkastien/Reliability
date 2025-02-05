@@ -1,0 +1,20 @@
+name = "jiwonz/dirs"
+version = "0.1.2"
+description = "A library for lune that provides config/cache/data paths. Heavily inspired by dirs-rs"
+license = "MIT"
+authors = ["jiwonz"]
+repository = "https://github.com/jiwonz/dirs-lune/"
+private = false
+includes = ["LICENSE.md", "README.md", "pesde.toml", "src"]
+
+[target]
+environment = "lune"
+lib = "src/init.luau"
+
+[indices]
+default = "https://github.com/daimond113/pesde-index"
+
+[dependencies.pathfs]
+name = "jiwonz/pathfs"
+version = "^0.1.0"
+index = "https://github.com/daimond113/pesde-index"

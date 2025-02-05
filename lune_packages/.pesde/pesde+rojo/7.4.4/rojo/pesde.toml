@@ -1,0 +1,27 @@
+name = "pesde/rojo"
+version = "7.4.4"
+description = "Rojo enables Roblox developers to use professional-grade software engineering tools"
+authors = ["CompeyDev <hi@devcomp.xyz>", "Lucien Greathouse <me@lpghatguy.com>"]
+repository = "https://github.com/pesde-pkg/tooling/tree/main/bins/rojo"
+private = false
+includes = ["init.luau", "pesde.toml"]
+
+[target]
+environment = "lune"
+bin = "init.luau"
+
+[dependencies.core]
+name = "pesde/toolchainlib"
+version = "^0.1.1"
+index = "https://github.com/daimond113/pesde-index"
+target = "lune"
+
+[dependencies.option]
+name = "lukadev_0/option"
+version = "^1.2.0"
+index = "https://github.com/daimond113/pesde-index"
+
+[dependencies.result]
+name = "lukadev_0/result"
+version = "^1.2.0"
+index = "https://github.com/daimond113/pesde-index"

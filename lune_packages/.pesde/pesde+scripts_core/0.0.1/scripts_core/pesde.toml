@@ -1,0 +1,40 @@
+name = "pesde/scripts_core"
+version = "0.0.1"
+description = "Scripts and other utilities for use with pesde"
+license = "MIT"
+authors = ["daimond113 <contact@daimond113.com> (https://www.daimond113.com/)", "Erica Marigold <hi@devcomp.xyz>"]
+repository = "https://github.com/pesde-pkg/scripts"
+private = false
+includes = ["src/**/*.luau", "!src/**/*.spec.luau", "pesde.toml", "README.md", "LICENSE"]
+workspace_members = [".", ".pesde/rojo"]
+
+[target]
+environment = "lune"
+lib = "src/init.luau"
+
+[dev_dependencies.frktest]
+name = "itsfrank/frktest"
+version = "^0.0.2"
+index = "https://github.com/pesde-pkg/index"
+
+[dev_dependencies.luau-lsp]
+name = "pesde/luau_lsp"
+version = "^1.36.0"
+index = "https://github.com/pesde-pkg/index"
+
+[dev_dependencies.pathfs]
+name = "jiwonz/pathfs"
+version = "^0.1.0"
+index = "https://github.com/pesde-pkg/index"
+
+[dev_dependencies.stylua]
+name = "pesde/stylua"
+version = "^2.0.1"
+index = "https://github.com/pesde-pkg/index"
+
+[meta.scripts.rojo]
+version = "0.1.0"
+
+[meta.scripts.rojo.tool_dependencies.rojo]
+name = "pesde/rojo"
+version = "^7.4.4"
