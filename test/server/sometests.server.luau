@@ -1,4 +1,4 @@
-local TEST_LENGTH: number = 100
+local TEST_LENGTH: number = 10000
 
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -9,8 +9,8 @@ local SerdeLayer = require(ReplicatedStorage.Reliability.SerdeLayer)
 local SomeRemote = Reliability.getReliable("SomeRemote")
 local Serde = SerdeLayer.UInt32
 
-Players.PlayerAdded:Connect(function(Player: Player)
-    task.wait(5)
+Players.PlayerAdded:Connect(function(Player: Player): ()
+    task.wait(10)
     print("Starting bandwith test")
     local started: number = os.clock()
 
@@ -20,6 +20,6 @@ Players.PlayerAdded:Connect(function(Player: Player)
     end
 
     local finished: number = os.clock()
-    print(`Serialization + call time: {finished - started}`)
+    print(`Serialization + call time: {(finished - started)}`)
 end)
 

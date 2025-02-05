@@ -10,5 +10,4 @@ local NumberOfPackets: number = 0;
 
 SomeRemote.OnClientEvent:Connect(function(...): ()
     NumberOfPackets += 1
-    print("Received packet", NumberOfPackets, Serde:Deserialize(...))
 end)

@@ -13,6 +13,8 @@ local Serde = {
     UInt16 = require(script:WaitForChild("UInt16"));
     UInt32 = require(script:WaitForChild("UInt32"));
 
+    FInt64 = require(script:WaitForChild("FInt64"));
+
     Vector3 = require(script:WaitForChild("Vector3"));
     CFrame = require(script:WaitForChild("CFrame"));
 
