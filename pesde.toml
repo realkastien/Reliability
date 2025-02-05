@@ -1,3 +1,10 @@
+name = "realkastien/reliability"
+version = "0.0.5"
+description = "A lightweight networking library with buffers, extremely friendly syntax and focused on giving you high control over your Remote behavior."
+authors = ["realkastien", "Galvagniofc"]
+repository = "https://github.com/realkastien/Reliability"
+license = "MIT"
+
 includes = [
   "pesde.toml",
   "README.md",
