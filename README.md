@@ -42,6 +42,8 @@ local YourRemotes = {
 
     YouNameIt = "Reliable";
     MultipleRemotesAtOnce = "Unreliable";
+
+    FunctionsToo = "Function";
 }
 
 -- Returns a dictionary containing your remotes
