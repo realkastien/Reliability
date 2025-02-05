@@ -21,6 +21,10 @@ local Unreliables: Folder = ReliabilityStorage:FindFirstChild("Unreliables") :: 
 Unreliables.Name = "Unreliables"
 Unreliables.Parent = ReliabilityStorage
 
+local Functions: Folder = ReliabilityStorage:FindFirstChild("Functions") :: Folder or Instance.new("Folder")
+Functions.Name = "Functions"
+Functions.Parent = ReliabilityStorage
+
 local function NewRemote(Name: string, Unreliable: boolean?): UnreliableRemoteEvent | RemoteEvent
     local Remote: Instance = Instance.new((Unreliable and "Unreliable" or "").."RemoteEvent")
     Remote.Name = Name
@@ -29,12 +33,24 @@ local function NewRemote(Name: string, Unreliable: boolean?): UnreliableRemoteEv
     return Remote :: UnreliableRemoteEvent | RemoteEvent
 end
 
+local function NewFunction(Name: string): RemoteFunction
+    local Remote: RemoteFunction = Instance.new("RemoteFunction")
+    Remote.Name = Name
+    Remote.Parent = Functions
+
+    return Remote
+end
+
 function ServerReliability.getReliable(Name: string): RemoteEvent
     return (Reliables:FindFirstChild(Name) or NewRemote(Name)) :: RemoteEvent
 end
 
 function ServerReliability.getUnreliable(Name: string): RemoteEvent
     return (Unreliables:FindFirstChild(Name) or NewRemote(Name, true)) :: RemoteEvent
+end
+
+function ServerReliability.getFunction(Name: string): RemoteFunction
+    return (Functions:FindFirstChild(Name) or NewFunction(Name)) :: RemoteFunction
 end
 
 function ServerReliability.getNetwork(Structure: {[string]: string}, Prefix: string?): {[string]: RemoteEvent}
@@ -68,7 +84,7 @@ function ServerReliability.fireExcept(Remote: any & (RemoteEvent | UnreliableRem
             if ExceptLookUp[Player] then
                 continue
             end
-    
+
             Remote:FireClient(Player, ...)
         end
 

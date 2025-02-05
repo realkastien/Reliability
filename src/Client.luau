@@ -8,13 +8,18 @@ local ClientReliability = {
 
 local Storage = ReplicatedStorage:WaitForChild("ReliabilityStorage")
 local Reliables, Unreliables = Storage:WaitForChild("Reliables"), Storage:WaitForChild("Unreliables")
+local Functions = Storage:WaitForChild("Functions")
 
 function ClientReliability.getReliable(Name: string): RemoteEvent
     return Reliables:WaitForChild(Name)
 end
 
 function ClientReliability.getUnreliable(Name: string): UnreliableRemoteEvent
-    return Unreliables:FindFirstChild(Name)
+    return Unreliables:WaitForChild(Name)
+end
+
+function ClientReliability.getFunction(Name: string): RemoteFunction
+    return Functions:WaitForChild(Name)
 end
 
 function ClientReliability.getNetwork(Structure: {[string]: string}, Prefix: string?): {[string]: RemoteEvent | UnreliableRemoteEvent}
