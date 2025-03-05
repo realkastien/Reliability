@@ -1,3 +1,4 @@
+--!native
 local Types = require(script.Parent.Parent.Types)
 
 type PacketSerde = Types.PacketSerde
@@ -10,7 +11,7 @@ local function Serialize(self: TableSerde, Data: {[string]: any}, has: boolean?)
     local Buffers: {buffer} = {}
     local BufferLengths: {number} = {}
     local TotalSize: number = 0;
-    
+
     for _, Key: string in self._SerdeOrder do
         local Buffer: buffer, Size: number = self._Serdes[Key]:Serialize(Data[Key], true)
         TotalSize += Size

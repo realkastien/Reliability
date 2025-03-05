@@ -1,3 +1,4 @@
+--!native
 local Types = require(script.Parent.Parent.Types)
 
 export type PacketSerde = Types.PacketSerde
