@@ -6,7 +6,7 @@ A lightweight networking library with buffers, extremely friendly syntax and foc
 
 ### from Wally
 ```
-reliability = "realkastien/reliability@0.0.7"
+reliability = "realkastien/reliability@0.0.8"
 ```
 
 ## Getting Started
