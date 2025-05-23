@@ -6,3 +6,4 @@
 [tools]
 lune = "lune-org/lune@0.8.9"
 rojo = "rojo-rbx/rojo@7.4.4"
+pesde = "pesde-pkg/pesde@0.6.2+registry.0.2.2"
