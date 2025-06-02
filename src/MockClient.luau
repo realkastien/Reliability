@@ -19,6 +19,12 @@ function MockRemoteEvent.OnClientEvent:Connect(Callback: (...any)->()): ()
     if DEBUG then print("Connected to Remote",self.Name) end
 end
 
+function MockRemoteEvent.OnClientEvent:Wait(fakereturn): ()
+    if DEBUG then print("Waiting for Remote",self.Name) end
+    task.wait(math.random(0,.3))
+    return fakereturn
+end
+
 function MockRemoteEvent.OnClientEvent:Once(Callback: (...any)->()): ()
     if DEBUG then print("Connected once to Remote",self.Name) end
 end

@@ -2,7 +2,7 @@
 # It is not intended for manual editing.
 format = 1
 name = "realkastien/reliability"
-version = "0.0.7"
+version = "0.0.8"
 target = "roblox"
 
 [graph."0x5eal/unzip@0.1.0 luau"]

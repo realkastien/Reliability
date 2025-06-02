@@ -4,3 +4,18 @@
 # Roblox Studio lock files
 /*.rbxlx.lock
 /*.rbxl.lock
+.pesde/scripts/roblox_sync_config_generator.luau
+.pesde/scripts/sourcemap_generator.luau
+lune_packages/.pesde/jiwonz+dirs/0.1.2/dirs/lune_packages/pathfs.luau
+lune_packages/.pesde/pesde+rojo/7.4.4/rojo/lune_packages/core.luau
+lune_packages/.pesde/pesde+rojo/7.4.4/rojo/lune_packages/option.luau
+lune_packages/.pesde/pesde+rojo/7.4.4/rojo/lune_packages/result.luau
+lune_packages/.pesde/pesde+scripts_rojo/0.1.0/scripts_rojo/lune_packages/core.luau
+lune_packages/.pesde/pesde+scripts_rojo/0.1.0/scripts_rojo/lune_packages/rojo.bin.luau
+lune_packages/.pesde/pesde+toolchainlib/0.1.11/toolchainlib/luau_packages/unzip.luau
+lune_packages/.pesde/pesde+toolchainlib/0.1.11/toolchainlib/lune_packages/dirs.luau
+lune_packages/.pesde/pesde+toolchainlib/0.1.11/toolchainlib/lune_packages/option.luau
+lune_packages/.pesde/pesde+toolchainlib/0.1.11/toolchainlib/lune_packages/pathfs.luau
+lune_packages/.pesde/pesde+toolchainlib/0.1.11/toolchainlib/lune_packages/result.luau
+lune_packages/rojo.bin.luau
+sourcemap.json
